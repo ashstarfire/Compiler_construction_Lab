@@ -71,7 +71,7 @@ int recognizer(char input[])
 int main()
 {
 	char x[100];
-	cout<<"Enter a string: \n";
+	cout<<"\nEnter a string: \n";
 	cin>>x;
 	cout<<endl;
 	recognizer(x);
