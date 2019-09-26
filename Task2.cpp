@@ -2,7 +2,8 @@
 #include<cstring>
 using namespace std;
 bool recognizer(string);
-int main(){
+int main()
+{
 	string arr;
 	cout<<"enter string: ";
 	cin>>arr;
@@ -10,88 +11,110 @@ int main(){
 	
 }
 
-bool recognizer(string input){
+bool recognizer(string input)
+{
 	int size=input.length();
 	cout<<endl<<"size of input string is : "<<size;
 	int index=0;
 	int state=0;
 	while(1){
-	switch(state){
+	switch(state)
+	{
 		case 0:
-			if(size>0 && input[index]=='a'){
+			if(size>0 && input[index]=='a')
+			{
 				state=1;
 				index++;
 				size--;
 				cout<<endl<<"case 0";
 			}
 			
-			else if(size>0 && input[index]=='b'){
+			else if(size>0 && input[index]=='b')
+			{
 				state=3;
 				index++;
 				size--;
 				cout<<endl<<"case 0";
 			}
-				else if(size==0){
+				else if(size==0)
+				{
 				cout<<"case 0"<<endl;
 				cout<<"string accepted";
 				return true;break;
 			}
 				
 			
-			else{
+			else
+			{
 			
 				state=4;
-		}
+		         }
 			break;
+			
+			
 		case 1:
-			if(size>0 && input[index]=='b'){
+			if(size>0 && input[index]=='b')
+			{
 				state=2;
 				index++;
 				size--;
 				cout<<endl<<"case 1";
 			}
 			
-			else if(size>0 && input[index]=='a'){
+			else if(size>0 && input[index]=='a')
+			{
 				state=0;
 				index++;
 				size--;
 				cout<<endl<<"case 1";
 			}
 			
-			else{
+			else
+			{
 				state=4;
 			}
 			break;
+			
+			
 		case 2:
-			if(size>0 && input[index]=='b'){
+			if(size>0 && input[index]=='b')
+			{
 				state=1;
 				index++;
 				size--;
 				cout<<endl<<"case 2";
-			}else if(size>0 && input[index]=='a'){
+			}
+			else if(size>0 && input[index]=='a')
+			{
 				state=3;
 				index++;
 				size--;
 				cout<<endl<<"case 2";
 			}
-			else{
+			else
+			{
 				state=4;
 			}
 			break;
 			
+			
 			case 3:
-			if(size>0 && input[index]=='b'){
+			if(size>0 && input[index]=='b')
+			{
 				state=0;
 				index++;
 				size--;
 				cout<<endl<<"case 3";
-			}else if(size>0 && input[index]=='a'){
+			}
+			else if(size>0 && input[index]=='a')
+			{
 				state=2;
 				index++;
 				size--;
 				cout<<endl<<"case 3";
 			}
-			else{
+			else
+			{
 				state=4;
 			}
 			break;
