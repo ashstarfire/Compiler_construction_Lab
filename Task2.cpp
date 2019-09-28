@@ -123,6 +123,7 @@ bool recognizer(string input)
 		case 4:
 			cout<<"string rejected";
 	        return false;
+			
 	}
 }
 }
