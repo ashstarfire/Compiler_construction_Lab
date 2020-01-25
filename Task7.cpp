@@ -21,7 +21,6 @@ bool isNonTerminal(string c)
 	}
 	 return flag;
 }
-
 bool checkForNonTerminals(string r)
 {
 	stringstream ss(r);
